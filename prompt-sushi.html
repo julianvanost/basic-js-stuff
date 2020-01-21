@@ -1,0 +1,87 @@
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Into to JS - Day One</title>
+</head>
+<style>
+  body {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 30px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  .myButt {
+    font-size: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  .btn {
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+
+  .btn:hover {
+    background-position: right center;
+  }
+
+  .btn-1 {
+    background-image: linear-gradient(to right,
+        #65f6f0 0%,
+        #ef3600 51%,
+        #c200f5de 100%);
+  }
+</style>
+
+<script type="text/javascript">
+  let bool = confirm("Press Ok if you like sushi")
+  let promptOut = prompt("What kind of Sushi do you like?")
+  alert("You like Sushi? " + bool)
+  alert("What type of Sushi you like: " + promptOut)
+  Document.body.innerHTML += '<p>Like Sushi? ' + bool + '</p>' + '<p>Type of Sushi you like: ' + promptOut + '</p>'
+  console.log("Do you like Sushi?")
+</script>
+
+<body id='body container'>
+  <button class="myButt btn btn-1" onclick="myFunction()">Run Javascript - Get Output</button>
+  <script>
+    function myFunction() {
+      document.body.innerHTML = '<p>Like Sushi? ' + bool + '</p>' + '<p>Type of Sushi you like: ' + promptOut + '</p><button class="myButt btn btn-1" onclick="reloadFunction()">Start Over</button>'
+    }
+    function reloadFunction() {
+      location.reload()
+    }
+  </script>
+
+
+</body>
+
+</html>
+
