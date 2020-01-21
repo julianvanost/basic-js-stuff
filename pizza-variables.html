@@ -1,0 +1,101 @@
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Into to JS - Day One</title>
+</head>
+<style>
+  body {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 30px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  .myButt {
+    font-size: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  .btn {
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+  .btn:hover { 
+    background-position: right center;
+  }
+  .btn-1
+  {
+    background-image: linear-gradient(to right,
+       #65f6f0 0%,
+       #ef3600 51%,
+       #c200f5de 100%
+     );
+  }
+
+</style>
+
+    <script type="text/javascript">
+
+    // Instructions:
+    // Create 3 variables. One called: "name", one called "pizzaCount", and one called "isHungry".
+    // The name variable should be set to your name.
+    // The pizzaCount variable should be set to a number.
+    // The isHungry variable should be set to true or false.
+
+    // FILL IN YOUR CODE HERE
+    // =============================================
+      let name = `Welcome ` + `Julian`
+      let pizzas = 'Pizzas cost $5 each'
+      let pizzaCount = 2
+      let isHungry = `Very hungry! Always hungry! Feed, me Seymore!`
+      let message = `<p>${`Still Hungry: ` + isHungry}</p>`
+    // ==============================================
+    // Don't touch this code :-) Whoops!
+    let totalCost = `Your total is: $` + pizzaCount * 5.00;
+    console.log("Welcome: " + name);
+    console.log("Pizzas cost $5 each");
+    console.log("Your total is: $" + totalCost);
+    console.log("Still Hungry: " + isHungry);
+    </script>
+<body id='body container'>
+  <button class="myButt btn btn-1" onclick="myFunction()">Run Javascript - Get Output</button>
+  <script>
+    function myFunction() {
+      document.body.innerHTML = '<p>' + name + '</p>' + '<p>' + pizzas + '</p>' + '<p>You got ' + pizzaCount + ' pizzas</p>' + '<p>'
+        + totalCost + '</p>' +
+      message +
+        '<button class="myButt btn btn-1" onclick="reloadFunction()">Start Over</button>'
+    }
+
+    function reloadFunction() {
+      location.reload()
+    }
+  </script>
+
+
+  </body>
+</html>
