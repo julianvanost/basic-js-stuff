@@ -1,0 +1,106 @@
+ <!-- 
+   prompt a user for a number. store it in a variable to be used later
+  prompt a user for an operation to be performed (add, subtract, multiply, divide) and store it in a variable to be
+used later
+ prompt a user for a second number. store it in a variable to be used later
+ build a switch case based over the operator variable, and based on the different operations, alert the results -->
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Into to JS - Day One</title>
+</head>
+<style>
+  body {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 30px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  .myButt {
+    font-size: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  .btn {
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+
+  .btn:hover {
+    background-position: right center;
+  }
+
+  .btn-1 {
+    background-image: linear-gradient(to right,
+        #e64210 0%,
+        #30f793 51%,
+        #4100f5de 100%);
+  }
+</style>
+<script type="text/javascript">
+  let message, outPut
+  let num = Number(prompt("Enter a Number")); //Number or parseInt
+  let userOperator = prompt("Enter your operator"); 
+  let num2 = Number(prompt("Enter Second Number")); //Number, or parseInt
+  switch (userOperator) {
+    case '+':
+      result = num + num2
+      break;
+    case '-':
+      result = num - num2
+      break;
+    case '*':
+      result = num * num2
+      break;
+    case '/':
+      result = num / num2
+      break;  
+    default:
+      break;
+  }
+console.log(result)
+message = result
+
+</script>
+<body id='body container'>
+  <button class="myButt btn btn-1" onclick="myFunction()">Run Javascript - Get Output</button>
+  <script>
+    function myFunction() {
+      document.body.innerHTML = `<button class="myButt btn btn-1"
+        onclick="reloadFunction()">Start Over</button>` + `<p>` + message + `</p>`
+    }
+    function reloadFunction() {
+      location.reload()
+    }
+  </script>
+</body>
+
+</html>
